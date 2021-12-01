@@ -1,33 +1,55 @@
 {
-  "name": "three.js-typescript-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "webpack --config ./src/client/webpack.prod.js",
-    "dev": "concurrently -k \"tsc -p ./src/server -w\" \"nodemon ./dist/server/server.js\" \"webpack serve --config ./src/client/webpack.dev.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/server/server.js"
-  },
-  "author": "Sean Bradley",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/express": "^4.17.13",
-    "@types/node": "^16.4.13",
-    "@types/three": "^0.130.1",
-    "concurrently": "^6.2.0",
-    "nodemon": "^2.0.12",
-    "three": "^0.131.3",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.3.5",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0",
-    "webpack-merge": "^5.8.0"
-  },
+  "name": "Monso",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "cannon-es": "^0.18.0",
-    "express": "^4.17.1",
-    "socket.io": "^4.1.3",
-    "socket.io-client": "^4.1.3"
+    "@liveblocks/client": "^0.13.0-beta.1",
+    "@liveblocks/react": "^0.13.0-beta.1",
+    "@react-three/drei": "^7.25.3",
+    "@react-three/fiber": "^7.0.21",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.29",
+    "@types/react": "^17.0.29",
+    "@types/react-dom": "^17.0.9",
+    "drei": "^2.2.21",
+    "firebase": "^9.5.0",
+    "perfect-freehand": "^1.0.15",
+    "react": "^17.0.2",
+    "react-colorful": "^5.5.1",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "three": "^0.135.0",
+    "typescript": "^4.4.4",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/three": "^0.134.0"
   }
 }
