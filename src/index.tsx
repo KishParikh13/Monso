@@ -15,10 +15,7 @@ render(
   <LiveblocksProvider client={client}>
     <RoomProvider id="Monso">
       {
-        true ?
         <App />
-        :
-        <Three />
       }
       
     </RoomProvider>

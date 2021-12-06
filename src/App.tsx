@@ -18,6 +18,7 @@ import { useKeyboardEvents } from "./hooks/useKeyboardEvents";
 import { connectionIdToColor } from "./utils";
 import { Canvas } from "react-three-fiber";
 import Three from "./Three";
+import { Dodecahedron, Plane, Sphere } from "@react-three/drei";
 
 // The scroll's y offset is based on the number of milliseconds
 // since 12:00AM today.
@@ -122,10 +123,10 @@ function Whiteboard({ lines }: { lines: LiveList<Line> }) {
         // onPointerDown={handlePointerDown}
         // onPointerMove={handlePointerMove}
         // onPointerUp={handlePointerUp}
-        // onPointerEnter={() => updateMyPresence({ isActive: true })}
-        // onPointerLeave={() =>
-          // updateMyPresence({ isActive: false, cursor: null })
-        // }
+        onPointerEnter={() => updateMyPresence({ isActive: true })}
+        onPointerLeave={() =>
+          updateMyPresence({ isActive: false, cursor: null })
+        }
       >
         {/* <g transform={`translate(0, -${getYOffset()})`}>
           {self && presence.points && presence.points.length > 2 && (
@@ -179,7 +180,6 @@ function Whiteboard({ lines }: { lines: LiveList<Line> }) {
           })}
         </g> */}
         {/* User Tokens */}
-
         <Three />
         <svg className="users">
         {others.toArray().map((other, i) => {
